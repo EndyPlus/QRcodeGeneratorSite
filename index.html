@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>QRcode</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-section">
+          <label for="pasteURL">Enter a link</label>
+          <input
+            type="url"
+            id="pasteURL"
+            value="https://example.com"
+            required
+          />
+        </div>
+        <div class="form-section">
+          <label for="chooseDarkColor">Choose a code color:</label>
+          <input type="color" id="chooseDarkColor" value="#000000" />
+        </div>
+        <div class="form-section">
+          <label for="chooseLightColor">Choose a background color:</label>
+          <input type="color" id="chooseLightColor" value="#ffffff" />
+        </div>
+      </form>
+
+      <button id="submitBTN">get a code</button>
+
+      <div id="qrcode">
+        <img src="/assets/preloaded.jpg" alt="preloaded" />
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
